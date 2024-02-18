@@ -30,11 +30,30 @@ for (const seclet of seclets) {
     
   });
 }
-// submit bidiable 
-const number =document.getElementById('number').addEventListener('keyup',function(){
-    const numberValue=number.value
-console.log(number)
+// cupon card use 
+;
+// const cupon=document.getElementById('cupon').addEventListener('keyup',function(){
+// const discount15Copun= cupon.value
+// console.log(discount15Copun)
+// })
+
+function getCopunValu(){
+  const cuponCode=document.getElementById('cupon').value
+  return cuponCode
+ 
+}
+// appy copun 
+const apply=document.getElementById('apply').addEventListener('keyup',function(){
+   const cupon= getCopunValu()
+   const discount15='NEW15'
+   if(discount15 === cupon){
+    console.log('laga birani')
+   }
+  else{
+    console.log('kamla dew')
+  }
 })
+
 
 // tricketPriceTotal
 

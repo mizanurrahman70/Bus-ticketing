@@ -21,7 +21,7 @@ for (const seclet of seclets) {
     tricketPrice = tricketPrice + 550;
     shitPositiveCount("total-price", tricketPrice);
     shitPositiveCount("positve-shit", count);
-
+    avibleShit("Available-shit",counts)
     const value = seclet.innerText;
     showsShit("shit", value);
     setClass("set-class");
@@ -31,7 +31,10 @@ for (const seclet of seclets) {
   });
 }
 // submit bidiable 
-const number =document.getElementById()
+const number =document.getElementById('number').addEventListener('keyup',function(){
+    const numberValue=number.value
+console.log(number)
+})
 
 // tricketPriceTotal
 

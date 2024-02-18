@@ -19,6 +19,7 @@ const seclets = document.getElementsByTagName("li");
 let count = 0;
 let counts = 40;
 let tricketPrice = 0;
+
 for (const seclet of seclets) {
   seclet.addEventListener("click", function () {
     count = count + 1;
@@ -35,12 +36,11 @@ for (const seclet of seclets) {
     
   });
 }
-// cupon card use 
-;
-// const cupon=document.getElementById('cupon').addEventListener('keyup',function(){
-// const discount15Copun= cupon.value
-// console.log(discount15Copun)
-// })
+// apply id hiden 
+function applytHiden() {
+  const show = document.getElementById("apply-hiden");
+  show.classList.add("hidden");
+}
 
 function getCopunValu(){
   const cuponCode=document.getElementById('cupon').value
@@ -48,16 +48,30 @@ function getCopunValu(){
  
 }
 // appy copun 
-const apply=document.getElementById('apply').addEventListener('keyup',function(){
-   const cupon= getCopunValu()
-   const discount15='NEW15'
-   if(discount15 === cupon){
-    console.log('laga birani')
+
+function cuponAppy(){
+  const cupon= getCopunValu()
+  const discount15='NEW15';
+ 
+if(cupon === 'NEW15' || cupon === 'Couple 20'){
+   if(cupon === 'NEW15'){
+    const newPrice= tricketPrice * 15 / 100;
+   const discountPrice=tricketPrice-newPrice;
+   shitPositiveCount('final-price',discountPrice)
+   applytHiden()
    }
-  else{
-    console.log('kamla dew')
+   else{
+    const newPrice= tricketPrice * 20 / 100;
+    const discountPrice=tricketPrice-newPrice;
+    shitPositiveCount('final-price',discountPrice)
+    applytHiden()
+   }
   }
-})
+ else{
+  alert ('Invalid cupon')
+}
+}
+
 
 
 // tricketPriceTotal

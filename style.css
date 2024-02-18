@@ -11,3 +11,9 @@
 .banner{
     background-image: url(./images/banner.png);
 }
+li{
+    margin-bottom: 20px;
+}
+.serial p{
+    margin-bottom: 20px; 
+}

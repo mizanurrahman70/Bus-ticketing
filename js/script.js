@@ -19,20 +19,27 @@ const seclets = document.getElementsByTagName("li");
 let count = 0;
 let counts = 40;
 let tricketPrice = 0;
-
+let shitCount=0;
 for (const seclet of seclets) {
   seclet.addEventListener("click", function () {
     count = count + 1;
     counts = counts - 1;
     tricketPrice = tricketPrice + 550;
-    shitPositiveCount("total-price", tricketPrice);
-    shitPositiveCount("positve-shit", count);
-    avibleShit("Available-shit",counts)
-    const value = seclet.innerText;
-    showsShit("shit", value);
-    setClass("set-class");
-    money("set-money");
-    seclet.classList.add("bg-amber-200");
+    shitCount = shitCount + 1 ;
+    if(shitCount <= 4){
+      shitPositiveCount("total-price", tricketPrice);
+      shitPositiveCount("final-price", tricketPrice);
+      shitPositiveCount("positve-shit", count);
+      avibleShit("Available-shit",counts)
+      const value = seclet.innerText;
+      showsShit("shit", value);
+      setClass("set-class");
+      money("set-money");
+      seclet.classList.add("bg-amber-200");
+    }
+    else{
+
+    }
     
   });
 }

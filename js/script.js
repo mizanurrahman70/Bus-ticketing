@@ -1,11 +1,16 @@
 // main button
 function buttonClick() {
   triketSecthionShow();
+  triketHiden()
 }
-
-// tricker secsiton show display
+// trciket submit section hiden 
+function triketHiden() {
+  const show = document.getElementById("tricket-id");
+  show.classList.add("hidden");
+}
+// tricker submit secsiton show display
 function triketSecthionShow() {
-  const show = document.getElementById("tricket-section");
+  const show = document.getElementById("submit");
   show.classList.remove("hidden");
 }
 

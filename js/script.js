@@ -25,25 +25,54 @@ let count = 0;
 let counts = 40;
 let tricketPrice = 0;
 let shitCount=0;
+// let arryShit=[];
+// const arrayLant=0
+
 for (const seclet of seclets) {
   seclet.addEventListener("click", function () {
     count = count + 1;
     counts = counts - 1;
     tricketPrice = tricketPrice + 550;
     shitCount = shitCount + 1 ;
+
     if(shitCount <= 4){
+      
+      const value = seclet.innerText;
       shitPositiveCount("total-price", tricketPrice);
       shitPositiveCount("final-price", tricketPrice);
       shitPositiveCount("positve-shit", count);
       avibleShit("Available-shit",counts)
-      const value = seclet.innerText;
-      showsShit("shit", value);
+       showsShit("shit", value);
       setClass("set-class");
       money("set-money");
-      seclet.classList.add("bg-green-300");  
+      seclet.classList.add("bg-green-300");
+      
+      
+      // if(arryShit.includes(value) === false){
+      //   shitPositiveCount("total-price", tricketPrice);
+      //   shitPositiveCount("final-price", tricketPrice);
+      //   shitPositiveCount("positve-shit", count);
+      //   avibleShit("Available-shit",counts)
+      //    showsShit("shit", value);
+      //   setClass("set-class");
+      //   money("set-money");
+      //   seclet.classList.add("bg-green-300");
+        
+      //    arryShit.push(value)
+      //    arrayLant=arryShit.langht()
+      //    console.log(arrayLant )
+         
+      // }
+      // else{
+      //   return alert('You sclet Multipul Shit') 
+       
+        
+      // }
+        
     }
     else{
     return alert('maximun you scelete 4 Shit')
+    
     }
     
   });

@@ -8,6 +8,11 @@ function triketHiden() {
   const show = document.getElementById("tricket-id");
   show.classList.add("hidden");
 }
+// confarmation mail hiden 
+function triketContune() {
+  const show = document.getElementById("my_modal_2");
+  show.classList.add("hidden");;
+}
 // tricker submit secsiton show display
 function triketSecthionShow() {
   const show = document.getElementById("submit");

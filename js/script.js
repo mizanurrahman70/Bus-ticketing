@@ -35,7 +35,7 @@ for (const seclet of seclets) {
       showsShit("shit", value);
       setClass("set-class");
       money("set-money");
-      seclet.classList.add("bg-green-300");
+      seclet.classList.add("bg-green-300");  
     }
     else{
     return alert('maximun you scelete 4 Shit')
